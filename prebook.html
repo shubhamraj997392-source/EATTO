@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EATTO – Pre-Book Your Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+
+<header>
+  <div class="logo">EATTO</div>
+  <a href="restaurants.html" style="color:#ff5722;text-decoration:none;">← Back</a>
+</header>
+
+<section class="container">
+
+  <!-- FOOD SECTION -->
+  <div>
+    <h2>Select Your Food</h2>
+
+    <div class="food-card">
+      <div>
+        <h4>Paneer Butter Masala</h4>
+        <p>₹220</p>
+      </div>
+      <button onclick="addItem(220)">Add</button>
+    </div>
+
+    <div class="food-card">
+      <div>
+        <h4>Veg Biryani</h4>
+        <p>₹180</p>
+      </div>
+      <button onclick="addItem(180)">Add</button>
+    </div>
+
+    <div class="food-card">
+      <div>
+        <h4>Butter Naan (2)</h4>
+        <p>₹60</p>
+      </div>
+      <button onclick="addItem(60)">Add</button>
+    </div>
+
+    <div class="food-card">
+      <div>
+        <h4>Cold Drink</h4>
+        <p>₹40</p>
+      </div>
+      <button onclick="addItem(40)">Add</button>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <h2>Pre-Book Details</h2>
+
+    <p><strong>Total Amount:</strong> ₹<span id="total">0</span></p>
+
+    <label>Arrival Time</label>
+    <input type="time" id="time">
+
+    <label>Order Type</label>
+    <select>
+      <option>Dine-In</option>
+      <option>Takeaway</option>
+    </select>
+
+    <button class="confirm" onclick="confirmOrder()">Confirm Pre-Booking</button>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 EATTO • Smart Food Pre-Booking
+</footer>
+
+<script>
+  let total = 0;
+
+  function addItem(price){
+    total += price;
+    document.getElementById("total").innerText = total;
+  }
+
+  function confirmOrder(){
+    if(total === 0){
+      alert("Please add at least one item 🍽️");
+      return;
+    }
+    alert("🎉 Pre-Booking Confirmed!\nFood will be ready at your selected time.");
+  }
+</script>
+
+</body>
+</html>

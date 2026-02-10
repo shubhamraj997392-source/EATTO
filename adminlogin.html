@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EATTO Admin Login</title>
+  <style>
+    body{font-family:Poppins,sans-serif;background:#ff5722;
+      display:flex;justify-content:center;align-items:center;height:100vh}
+    .box{background:#fff;padding:40px;border-radius:12px;width:320px}
+    input,button{width:100%;padding:10px;margin:10px 0}
+    button{background:#ff5722;color:#fff;border:none;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Admin Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+<script>
+  function login(){
+    window.location.href="admin-dashboard.html";
+  }
+</script>
+</body>
+</html>
