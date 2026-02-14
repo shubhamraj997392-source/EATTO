@@ -228,7 +228,12 @@
       gap:25px;
       align-items: center;
     }
-
+    a:hover{
+      opacity: 0.5;
+      transition: 0.3s;
+      color:#111;
+     
+    }
     .card{
       background:#fff;
       border-radius:14px;
