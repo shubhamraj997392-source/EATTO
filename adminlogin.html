@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EATTO Admin Login</title>
+  <style>
+    body{background:#ff5722;
+         font-family: 'segoe UI', sans-serif;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+     }
+    .login-form{
+      background-color: #cc461d;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      width: 320px;
+    }
+    .input-group {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 14px 12px;
+      font-size: 16px;
+      color: #fff;
+      background-color: transparent;
+      border: 2px solid #00f0ff;
+      border-radius: 8px;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+    .input-group input:focus {
+      box-shadow: 0 0 10px #00f0ff;
+    }
+    .input-group label{
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      background: #111;
+      color: #aaa;
+      padding: 0 4px;
+      transition: 0.3s ease;
+      pointer-events: none;
+    }
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + lable {
+      top: -10px;
+      font-size: 12px;
+      color: #00f0ff;
+    }
+    button{
+      width: 50%;
+      padding: 14px;
+      font-size: 16px;
+      background: linear-gradient(90deg, #00f0ff, #00bfff);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px #00f0ff66;
+    }
+    button:hover{
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00f0ffcc;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-form">
+   <form>
+    <div class="input-group">
+   <input type="text" required placeholder=" "/>
+   <lable> Name </lable>
+   </div>
+   
+   <div class="input-group">
+   <input type="email" required placeholder=" "/>
+   <lable> Email Adderess</lable>
+   </div>
+   <div class="input-group">
+   <input type="password" required placeholder=" "/>
+   <lable> Password </lable>
+   </div>
+   <button type="submit"> login</button>
+    </form>
+  </div>
+
+<script>
+  function login(){
+    document.querySelector(".btn").addEventListener("click",function(){
+    window.location.href="admindasbord.html";
+  })
+}
+login();
+</script>
+</body>
+</html>
